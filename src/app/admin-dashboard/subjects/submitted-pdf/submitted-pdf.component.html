@@ -1,0 +1,33 @@
+
+<h3>{{instructions.instructions}}</h3>
+
+<mat-card style="height:auto;">
+<pdf-viewer  
+
+    [src]="pdfurl"
+    [render-text]="true"
+    [show-all]="true"
+    style="display: block; height:50vh;width: 1000px;"
+></pdf-viewer>
+
+<div class="set">
+<button mat-button> Download Pdf</button>
+ 
+<div>
+    <form #form="ngForm" (ngSubmit)="submit(form.value)">
+<mat-form-field class="example-full-width">
+    <mat-label>Grade</mat-label>
+    <input matInput placeholder="Ex. 90" ngModel name="grade">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+    <mat-label>Remarks</mat-label>
+    <textarea matInput placeholder="Ex. Need more improvement"ngModel name="remarks"></textarea>
+</mat-form-field>
+
+<button mat-raised-button style="margin-left:10px" type="submit">Submit</button>
+</form>
+</div>
+</div>
+
+</mat-card>

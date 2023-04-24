@@ -33,14 +33,6 @@ export class PdfViwerComponent implements OnInit {
  
 
   console.log(this.pdfurl)
-
-
-
-   
-
-
-   
-
    
   }
 

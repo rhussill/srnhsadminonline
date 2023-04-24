@@ -74,6 +74,8 @@ export class AdminactivitiesComponent implements OnInit {
   rowclick(row){
 
     console.log(row)
+    localStorage.setItem("filename",row.FileName)
+    localStorage.setItem('sub',row.NewProfile)
     this.service.fileName = row.FileName
     this.service.userDetail = row;
     this.dialog.open(UserDetailComponent)

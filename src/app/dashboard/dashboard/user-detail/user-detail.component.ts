@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AppService } from 'src/app/app.service';
 import { PdfViwerComponent } from './pdf-viwer/pdf-viwer.component';
+import { StudentSubmitComponent } from 'src/app/admin-dashboard/subjects/student-submit/student-submit.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -22,6 +23,10 @@ export class UserDetailComponent implements OnInit {
 
   view(){
     this.dialog.open(PdfViwerComponent)
+  }
+
+  show(){
+    this.dialog.open(StudentSubmitComponent)
   }
   
   

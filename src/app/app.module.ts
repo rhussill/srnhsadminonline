@@ -95,6 +95,11 @@ import { EnglishComponent } from './admin-dashboard/subjects/english/english.com
 import { ApComponent } from './admin-dashboard/subjects/ap/ap.component';
 import { SciencesubComponent } from './admin-dashboard/subjects/science/sciencesub.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { StudentSubmitComponent } from './admin-dashboard/subjects/student-submit/student-submit.component';
+import { SubmittedPdfComponent } from './admin-dashboard/subjects/submitted-pdf/submitted-pdf.component';
+import { ViewAllAnnouncementComponent } from './dashboard/result/view-all-announcement/view-all-announcement.component';
+import { AddAnnouncementComponent } from './dashboard/result/view-all-announcement/add-announcement/add-announcement.component';
+import { EditAnnouncementComponent } from './dashboard/result/view-all-announcement/edit-announcement/edit-announcement.component';
 
 
 
@@ -145,7 +150,12 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     MathComponent,
     EnglishComponent,
     ApComponent,
-    SciencesubComponent
+    SciencesubComponent,
+    StudentSubmitComponent,
+    SubmittedPdfComponent,
+    ViewAllAnnouncementComponent,
+    AddAnnouncementComponent,
+    EditAnnouncementComponent
   ],
   imports: [
     CommonModule,

@@ -82,10 +82,113 @@ export class AppService {
   getActbySubjURL= environment.apiURL + 'admin/getsubject'
   subjectOBJ:any;
 
+  getStudentSubmittedinACTURL = environment.apiURL + 'api/getstudentsubject'
+
+
+  //announcement
+
+  addAnnouncementURL = environment.apiURL + 'admin/announcement'
+  getAnnouncementURl= environment.apiURL + 'admin/announcement'
+  editAnnouncementURL = environment.apiURL + 'admin/updateannouncement'
+
+  announcementData:any;
+  announcementDataID:any;
+
+
+  //grading
+
+  profileID:any;
+  fileID:any;
+
+  gradeURL = environment.apiURL + 'admin/throwgrade'
+
   constructor(private http: HttpClient) { }
 
 
+  //grading
+
+  
+  grade(form:any){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.patch<any>(`${this.gradeURL}/${this.profileID}/${this.fileID}`,form,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
+
+
+
+
+  //announcement
+
+  updateAnnouncement(form:any, _id:any){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.patch<any>(`${this.editAnnouncementURL}/${_id}`,form,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
+
+
+   addAnnouncement(form:any){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.post<any>(this.addAnnouncementURL,form,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
+
+  getAllAnnouncement(pageNo){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.get<any>(`${this.getAnnouncementURl}/${pageNo}`,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
+
+
   //subject
+
+
+
+
+  getStudentSubmittedinACT(){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.get<any>(`${this.getStudentSubmittedinACTURL}/${localStorage.getItem('sub')}/${localStorage.getItem('filename')}`,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
 
     getsubject(){
 

@@ -1,0 +1,252 @@
+.header{
+    background-color: white;
+    height: 11%;
+    border-bottom: 1px solid;
+    border-color: black;
+}
+
+
+.upload-title{
+    position: relative;
+    left: 2%;
+    top:30%
+
+
+}
+
+.box{
+    font-size: 15px;
+    border-radius: 4px;
+    top: -33%;
+    position: relative;
+    width: 292px;
+    left: 37%;
+    height: 35px;
+    border-style: unset;
+    background: #f6f6f7;
+    text-indent: 29px;
+}
+
+.usercontainer{
+    bottom: 82%;
+    position: relative;
+    width: 120px;
+    background-color: #ededed;
+    height: 44px;
+    border-radius: 5px;
+    position: relative;
+    left: 90%;
+}
+
+.usertext{
+    top: 9%;
+    margin-left: 50px;
+    position: relative;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 0px;
+}
+.jobtext{
+    top: 5%;
+    left: 26%;
+    position: relative;
+    font-size: 13px;
+    color: #bababf;
+}
+
+
+h3{
+    position: relative;
+    margin: -4px;
+    right: -3.5px;
+    font-weight: 600;
+}
+
+.iconsearch{
+    color: grey;
+    transform: scale(0.7);
+    position: relative;
+    left: 39%;
+    z-index: 1;
+    bottom: 25%;
+}
+
+
+#competency{
+    width: 92%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+} 
+/* Header part of the Matcard */
+.titlebox{
+   display: flex;
+   flex: 2;
+   justify-content: space-between;   
+}
+.title{
+   padding-top: 16px;
+}
+.title span{
+   font-size: larger;
+   font-weight: 600;
+   font-family: sans-serif;
+}
+.logo{
+   display: inline-flex;
+   align-content: center;
+   align-items: center;
+}
+img {
+   width: 50px;
+   height:60%;
+}
+span{
+   font-size: larger;
+   font-weight: bold;
+}
+
+
+
+/* table */
+
+
+
+#competency{
+    width: 92%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+} 
+/* Header part of the Matcard */
+.titlebox{
+   display: flex;
+   flex: 2;
+   justify-content: space-between;   
+}
+.title{
+   padding-top: 16px;
+}
+.title span{
+   font-size: larger;
+   font-weight: 600;
+   font-family: sans-serif;
+}
+.logo{
+   display: inline-flex;
+   align-content: center;
+   align-items: center;
+}
+img {
+   width: 50px;
+   height:60%;
+}
+span{
+   font-size: larger;
+   font-weight: bold;
+}
+
+
+/* Competency Data Source Table */
+table{
+   width: 100%;
+   background-color: white;   
+}
+tr:hover{
+   background-color: rgb(230, 230, 230);
+}
+
+th{
+   color: black;
+   font-weight: bold;
+   font-size: 15px;
+   font-family: sans-serif;
+}
+th.mat-header-cell {
+   background: rgb(241, 241, 241);
+   background: linear-gradient(90deg, rgb(255, 255, 255) 42%);   
+}
+td{
+ font-family: sans-serif;
+}
+.save{
+   display: flex;
+   justify-content: right;
+   margin-top: 16px;
+}
+.save button{
+   background-color: rgb(56, 123, 56);
+   color: white !important;
+ }
+
+ 
+#breadcrumb-container{
+ width:98%;
+ padding: 16px;
+ background-color: rgb(235, 235, 235);
+}
+
+ #controls{
+     padding-top: 45px;
+     margin: 0;
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-items: top;
+     
+ }
+ #add{
+   background-color: #366e9f;
+   color: white;
+   font-weight: 400;
+   margin-right: 3px;
+ }
+ #import{
+   background-color: #55acf7;
+   color: white;
+   font-weight: 400;
+ }
+ #controls mat-form-field{
+   width: 450px;
+ }
+.active mat-chip{
+   background-color: rgb(107, 199, 107);
+   color: white;
+ }
+ .inactive{
+   color: rgb(138, 138, 138) !important;
+   background-color: rgb(243, 243, 243);
+ }
+ .inactive mat-chip{
+   background-color: #e76a6a;
+   color: white;
+ }
+ /* .inactive:hover{
+   background-color: #dc9f9f;
+ } */
+ ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+ ::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+ ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+   transform: translateY(-1.1em) scale(.75);
+   width: 133.33333%;
+}
+ #loader{
+   position: fixed;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0,0,0,0.4);
+   z-index: 9;
+ }
+
+ #searchbox,#datepicker,#status-dropdown{
+   width:300px !important;
+ }
+
+ mat-form-field{
+   margin-right: 16px !important;
+ }

@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiURL : 'http://192.168.1.19:3001/', 
+  // apiURL : 'http://192.168.1.19:3001/', 
   // apiURL : 'http://172.20.10.2:3001/',
-  // apiURL : 'http://13.229.126.192:3001/',
+  apiURL : 'http://13.229.126.192:3001/',
 
  
 };

@@ -1,0 +1,57 @@
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+    <div>
+        <div class="payment">
+            <h3>Create Announcement</h3>
+            <mat-card class="formsize" class="mat-elevation-z0">
+                <div>
+
+
+                    <br>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Announcement Title</mat-label>
+                        <input matInput type="text" required  ngModel name="announcementtitle"
+                             maxlength="100" minlength="2">
+                    </mat-form-field>
+
+
+                    <br>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Details</mat-label>
+                        <textarea matInput placeholder="Ex. It makes me feel..." ngModel name="detail"></textarea>
+                    </mat-form-field>
+
+                    <br>
+
+
+                    <mat-form-field appearance="outline" id="datepicker" style="width:80%">
+                        <mat-label>Date Range</mat-label>
+                        <mat-date-range-input [rangePicker]="picker" >
+                          <input matStartDate placeholder="Start date" name="start_date" [(ngModel)]="start_date" required>
+                          <input matEndDate placeholder="End date" name="end_date" [(ngModel)]="end_date" required>
+                        </mat-date-range-input>
+                        <!-- <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                      </mat-form-field>
+
+                    <br>
+
+                 
+                   
+
+
+
+                </div>
+            </mat-card>
+        </div>
+
+        <div id="controls">
+            <button mat-button type="button" (click)="cancel()">Cancel</button>
+            <button mat-raised-button type="submit" color="primary"
+                [disabled]="form.invalid || disable_button">Save</button>
+        </div>
+    </div>
+
+</form>

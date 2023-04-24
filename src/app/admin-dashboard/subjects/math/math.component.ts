@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from 'src/app/app.service';
+import { StudentSubmitComponent } from '../student-submit/student-submit.component';
 
 @Component({
   selector: 'app-math',
@@ -31,7 +33,7 @@ export class MathComponent implements OnInit {
   pageNo:number =1;
   pageSize:number=10;
   total:any;
-  constructor(private service : AppService) { }
+  constructor(private service : AppService , private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.getMathAct();
@@ -47,6 +49,11 @@ export class MathComponent implements OnInit {
     })
   }
 
+  rowclick(row){
+    console.log(row)
+    localStorage.setItem('filename',row.FileName)
+    this.dialog.open(StudentSubmitComponent)
+  }
  
   
 
