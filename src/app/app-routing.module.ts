@@ -28,6 +28,10 @@ import { EnglishComponent } from './admin-dashboard/subjects/english/english.com
 import { ApComponent } from './admin-dashboard/subjects/ap/ap.component';
 import { SciencesubComponent } from './admin-dashboard/subjects/science/sciencesub.component';
 import { ViewAllAnnouncementComponent } from './dashboard/result/view-all-announcement/view-all-announcement.component';
+import { TleComponent } from './admin-dashboard/subjects/tle/tle.component';
+import { MapehComponent } from './admin-dashboard/subjects/mapeh/mapeh.component';
+import { FilipinoComponent } from './admin-dashboard/subjects/filipino/filipino.component';
+import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
 
 
 const routes: Routes = [
@@ -60,6 +64,10 @@ const routes: Routes = [
       { path: 'sciencesub', component: SciencesubComponent },
       { path: 'english', component: EnglishComponent },
       { path: 'ap', component: ApComponent },
+      {path:'tle',component:TleComponent},
+      {path:'mapeh',component:MapehComponent},
+      {path:'filipino',component:FilipinoComponent},
+      {path:'esp',component:EspComponent},
       {path:'viewallannouncement',component:ViewAllAnnouncementComponent}
     ]
   },

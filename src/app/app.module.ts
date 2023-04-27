@@ -100,6 +100,10 @@ import { SubmittedPdfComponent } from './admin-dashboard/subjects/submitted-pdf/
 import { ViewAllAnnouncementComponent } from './dashboard/result/view-all-announcement/view-all-announcement.component';
 import { AddAnnouncementComponent } from './dashboard/result/view-all-announcement/add-announcement/add-announcement.component';
 import { EditAnnouncementComponent } from './dashboard/result/view-all-announcement/edit-announcement/edit-announcement.component';
+import { TleComponent } from './admin-dashboard/subjects/tle/tle.component';
+import { MapehComponent } from './admin-dashboard/subjects/mapeh/mapeh.component';
+import { FilipinoComponent } from './admin-dashboard/subjects/filipino/filipino.component';
+import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
 
 
 
@@ -155,7 +159,11 @@ import { EditAnnouncementComponent } from './dashboard/result/view-all-announcem
     SubmittedPdfComponent,
     ViewAllAnnouncementComponent,
     AddAnnouncementComponent,
-    EditAnnouncementComponent
+    EditAnnouncementComponent,
+    TleComponent,
+    MapehComponent,
+    FilipinoComponent,
+    EspComponent
   ],
   imports: [
     CommonModule,
