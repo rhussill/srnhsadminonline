@@ -10,10 +10,34 @@ import { AppService } from 'src/app/app.service';
 })
 export class ScienceComponent implements OnInit {
 
+
+  fileToUpload: any;
+  imageUrl: any;
+
+
+
+
   constructor(private router:Router ,private service:AppService) { }
 
   ngOnInit(): void {
   }
+
+  handleFileInput(files:any) {
+
+    const inputElement = event.target as HTMLInputElement;
+    files = inputElement.files;
+    this.fileToUpload = files.item(0);
+
+    //Show image preview
+    let reader = new FileReader();
+    reader.onload = (event: any) => {
+      this.imageUrl = event.target.result;
+    }
+    reader.readAsDataURL(this.fileToUpload);
+  }
+
+
+  
 
   navigateToMath(){
 
@@ -34,7 +58,7 @@ export class ScienceComponent implements OnInit {
 
   navigateToAP(){
     this.router.navigate(['sidenav/ap'])
-    localStorage.setItem('sub','Araling Panlipunan')
+    localStorage.setItem('sub','AralingPanlipunan')
   }
 
  

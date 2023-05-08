@@ -16,7 +16,7 @@ export class StudentSubmitComponent implements OnInit {
   total: any;
 
 
-  displayedColumns: string[] = ['name','datesub','filename'];
+  displayedColumns: string[] = ['name','datesub','remarks','filename'];
   constructor(private service:AppService , private dialog:MatDialog) { }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class StudentSubmitComponent implements OnInit {
   getstudent(){
     this.service.getStudentSubmittedinACT().subscribe(data=>{
       console.log(data,'submitted')
-      this.studentsubmit = data
+      this.studentsubmit = data.result
     })
   }
 

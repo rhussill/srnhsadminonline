@@ -33,7 +33,7 @@ export class FilterFormComponent implements OnInit {
     'Math',
     'Science',
     'English',
-    'Araling Panlipunan',
+    'AralingPanlipunan',
     'Tle',
     'Mapeh',
     'Filipino',

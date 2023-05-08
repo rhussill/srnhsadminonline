@@ -27,12 +27,7 @@ export const navbarDatauser = [
         icon: 'fal fa-user',
         label: 'Profile'
     },
-    
-    {
-        routeLink: 'settings',
-        icon: '	fal fa-cog',style:"background:transparent",
-        label: 'Settings'
-    },
+
 
   
     

@@ -79,7 +79,7 @@ export class AppService {
   viewPDF:any
  
   //subject
-  getActbySubjURL= environment.apiURL + 'admin/getsubject'
+  getActbySubjURL= environment.apiURL + 'admin/getsubjectstudent'
   subjectOBJ:any;
 
   getStudentSubmittedinACTURL = environment.apiURL + 'api/getstudentsubject'
@@ -97,21 +97,56 @@ export class AppService {
 
   //grading
 
+  getgradeadminURL = environment.apiURL + 'api/viewgrade'
+
   profileID:any;
   fileID:any;
 
   gradeURL = environment.apiURL + 'admin/throwgrade'
 
+
+  //download
+
+  downloadS3URL = environment.apiURL +'api/download'
+
   constructor(private http: HttpClient) { }
+
+  //download
+
+  downloadfile() {
+    this.http.get(`${this.downloadS3URL}?fileKey=${this.userDetail.FileName}`, { responseType: 'blob' })
+      .subscribe((blob: Blob) => {
+        const downloadLink = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        downloadLink.href = url;
+        downloadLink.download = this.userDetail.FileName;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      });
+    }
 
 
   //grading
+
+
+  getallgradeAdmin(){
+    
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.get<any>(this.getgradeadminURL,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  }
 
   
   grade(form:any){
 
     let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
-    return this.http.patch<any>(`${this.gradeURL}/${this.profileID}/${this.fileID}`,form,options).
+    return this.http.patch<any>(`${this.gradeURL}/${this.userDetail.fName}/${this.userDetail.lName}/${this.fileID}`,form,options).
     pipe(
       map(data => data),
       retry(3),

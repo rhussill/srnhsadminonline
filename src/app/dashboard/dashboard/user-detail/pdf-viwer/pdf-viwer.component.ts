@@ -36,6 +36,13 @@ export class PdfViwerComponent implements OnInit {
    
   }
 
+  download(){
+
+
+    this.service.downloadfile();
+
+  }
+
 
 
 }

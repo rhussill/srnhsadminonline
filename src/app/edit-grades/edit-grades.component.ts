@@ -38,7 +38,7 @@ const ELEMENT_DATA: viewCompetency[] = [
 })
 export class EditGradesComponent implements OnInit {
 
-  displayedColumns: string[] = ['Email', 'FirstName', 'LastName', 'pnumber', 'dob'];
+  displayedColumns: string[] = ['Email', 'FirstName', 'LastName', 'pnumber', 'dob','AP','TLE','Mapeh','Filipino','ESP'];
 
   viewAlladmindata: any;
   viewAlldatasource: any;
@@ -60,6 +60,8 @@ export class EditGradesComponent implements OnInit {
   adminpageSize: number = 5;
   totaladmin: any;
 
+  data:any;
+
 
 
   constructor(private dialog: MatDialog, private service: AppService) { }
@@ -67,10 +69,16 @@ export class EditGradesComponent implements OnInit {
   ngOnInit(): void {
 
     this.applyFilter = debounce(this.applyFilter, 1000);
+    this.getallgradeADMIN();
 
-    this.getAlladmin();
-    this.getAllusers();
+  }
 
+
+  getallgradeADMIN(){
+    this.service.getallgradeAdmin().subscribe(data=>{
+      console.log(data,'admingrade')
+      this.data = data
+    })
   }
 
   addUser() {

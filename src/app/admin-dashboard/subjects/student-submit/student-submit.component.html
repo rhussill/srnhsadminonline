@@ -12,6 +12,12 @@
             <td mat-cell *matCellDef="let element"> {{element.FileName}} </td>
         </ng-container>
 
+
+        <ng-container matColumnDef="remarks">
+            <th mat-header-cell *matHeaderCellDef  style="width:40%;color: black;"> Remarks </th>
+            <td mat-cell *matCellDef="let element"> {{element.remarks}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="filename">
             <th mat-header-cell *matHeaderCellDef  style="width:30%;color: black;" > Date Submitted </th>
             <td mat-cell *matCellDef="let element"> {{element.TimeStamp}} </td>

@@ -36,7 +36,10 @@
                 </tr>
             </table>
             <mat-grid-list cols="2" rowHeight="4:1" [gutterSize]="'1rem'" >
-                <mat-grid-tile class="tile1" ><img src="../../../assets/math.png" width="100%" height="auto" max-width="680px" (click)=" navigateToMath()"></mat-grid-tile>
+               <!-- <div ><input #Image type="file" (change)="handleFileInput($event)"/>
+                <mat-grid-tile class="tile1" ><img *ngIf="imageUrl" [src]="imageUrl" width="100%" height="auto" max-width="680px" (click)=" navigateToMath()"></mat-grid-tile>
+               </div> -->
+               <mat-grid-tile class="tile1" ><img  src="../../../assets/math.png" width="100%" height="auto" max-width="680px" (click)=" navigateToMath()"></mat-grid-tile>
                 <mat-grid-tile class="tile1"><img src="../../../assets/science.png" width="100%" height="auto" max-width="680px"(click)=" navigateToScience()" ></mat-grid-tile>
                 <mat-grid-tile class="tile1"><img src="../../../assets/english.png" width="100%" height="auto" max-width="680px" (click)=" navigateToEnglish()"></mat-grid-tile>
                 <mat-grid-tile class="tile1"><img src="../../../assets/AP.jpg" width="100%" height="auto" max-width="680px" (click)=" navigateToAP()"></mat-grid-tile>
