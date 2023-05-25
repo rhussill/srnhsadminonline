@@ -104,6 +104,8 @@ import { TleComponent } from './admin-dashboard/subjects/tle/tle.component';
 import { MapehComponent } from './admin-dashboard/subjects/mapeh/mapeh.component';
 import { FilipinoComponent } from './admin-dashboard/subjects/filipino/filipino.component';
 import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
+import { ContactusDialogComponent } from './contactus-dialog/contactus-dialog.component';
+import { DashComponent } from './dash/dash.component';
 
 
 
@@ -163,7 +165,9 @@ import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
     TleComponent,
     MapehComponent,
     FilipinoComponent,
-    EspComponent
+    EspComponent,
+    ContactusDialogComponent,
+    DashComponent
   ],
   imports: [
     CommonModule,

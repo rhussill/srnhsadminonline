@@ -1,17 +1,12 @@
 <div id="sidecard">
    <mat-list >
    
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>home</mat-icon>Home</mat-list-item>
+      <mat-list-item mat-ripple class="child_option" [routerLink]="'/home'"><mat-icon matPrefix>home</mat-icon>Home</mat-list-item>
       <br>
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>accessibility</mat-icon>Service</mat-list-item>
       <br>
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>question_answer</mat-icon>Something</mat-list-item>
+      <mat-list-item mat-ripple class="child_option" (click)="open()"><mat-icon matPrefix>contact_phone</mat-icon>Contact Us</mat-list-item>
       <br>
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>assistant_photo</mat-icon>About</mat-list-item>
-      <br>
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>contact_phone</mat-icon>Contact Us</mat-list-item>
-      <br>
-      <mat-list-item mat-ripple class="child_option"><mat-icon matPrefix>lock</mat-icon>Login</mat-list-item>
+      <mat-list-item mat-ripple class="child_option" [routerLink]="'/login'"><mat-icon matPrefix>lock</mat-icon>Login</mat-list-item>
       <br>
       <mat-list-item mat-ripple class="child_option"> <button mat-raised-button id="signupbttn" (click)="signup()">Sign Up</button> </mat-list-item>
    </mat-list >

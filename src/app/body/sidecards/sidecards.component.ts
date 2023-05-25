@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ContactusDialogComponent } from 'src/app/contactus-dialog/contactus-dialog.component';
 
 
 @Component({
@@ -10,9 +12,16 @@ import { Router } from '@angular/router';
 export class SidecardsComponent implements OnInit {
   selected: Date | any;
   url:any = '';
-  constructor( private router:Router) { }
+  constructor( private router:Router ,private dialog:MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+
+  open(){
+
+    this.dialog.open(ContactusDialogComponent)
+
   }
   
   // onSelectFile(event:any) {

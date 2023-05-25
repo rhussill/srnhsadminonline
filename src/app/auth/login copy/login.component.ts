@@ -55,7 +55,7 @@ export class adminLoginComponent implements OnInit {
         localStorage.setItem("Token",this.responsedata.token)
         localStorage.setItem("role",this.responsedata.user.roles)
         console.log("admin",this.responsedata.user.roles)
-        this.router.navigate(['sidenav/admin'])
+        this.router.navigate(['sidenav/dashboard'])
        
       }
     });

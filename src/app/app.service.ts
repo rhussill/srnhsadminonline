@@ -90,6 +90,7 @@ export class AppService {
   addAnnouncementURL = environment.apiURL + 'admin/announcement'
   getAnnouncementURl= environment.apiURL + 'admin/announcement'
   editAnnouncementURL = environment.apiURL + 'admin/updateannouncement'
+  getActiveAnnouceURL = environment.apiURL + 'api/getactive';
 
   announcementData:any;
   announcementDataID:any;
@@ -195,6 +196,21 @@ export class AppService {
 
     let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
     return this.http.get<any>(`${this.getAnnouncementURl}/${pageNo}`,options).
+    pipe(
+      map(data => data),
+      retry(3),
+      catchError(this.handleError)
+    )
+
+  
+
+  }
+
+
+  getAllActiveAnnouncement(pageNo){
+
+    let options =  { headers: new HttpHeaders({'Content-Type':  'application/json'})};
+    return this.http.get<any>(`${this.getActiveAnnouceURL}/${pageNo}`,options).
     pipe(
       map(data => data),
       retry(3),

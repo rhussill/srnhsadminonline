@@ -1,6 +1,8 @@
 import {  Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactusDialogComponent } from 'src/app/contactus-dialog/contactus-dialog.component';
 
 
 
@@ -16,9 +18,16 @@ export class HeaderComponent implements OnInit {
   
   @Output() menuClickedEvent = new EventEmitter<void>();
 
-  constructor(private router:Router ) { }
+  constructor(private router:Router , private dialog:MatDialog ) { }
 
   ngOnInit(): void {
+  }
+
+
+  open(){
+
+    this.dialog.open(ContactusDialogComponent)
+    
   }
 
   menuClicked(){

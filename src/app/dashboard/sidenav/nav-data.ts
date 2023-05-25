@@ -2,6 +2,13 @@ import { style } from "@angular/animations";
 
 export const navbarData = [
 
+
+    {
+        routeLink: 'dashboard',
+        icon: 'fa fa-window-maximize',
+        label: 'Dashboard' ,style:"color:#7770a5;"
+    },
+
     {
         routeLink: 'admin',
         icon: 'fal fa-user',
@@ -27,11 +34,7 @@ export const navbarData = [
         icon: 'fal fa-list-alt',
         label: 'Grades'
     },
-    {
-        routeLink: 'profile',
-        icon: 'fal fa-user',
-        label: 'Profile'
-    },
+ 
     
   
 

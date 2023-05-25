@@ -32,6 +32,8 @@ import { TleComponent } from './admin-dashboard/subjects/tle/tle.component';
 import { MapehComponent } from './admin-dashboard/subjects/mapeh/mapeh.component';
 import { FilipinoComponent } from './admin-dashboard/subjects/filipino/filipino.component';
 import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
+import { ContactusDialogComponent } from './contactus-dialog/contactus-dialog.component';
+import { DashComponent } from './dash/dash.component';
 
 
 const routes: Routes = [
@@ -39,6 +41,7 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'contact', component: ContactusDialogComponent },
 
   // {path:'aionco',component:AioncoComponent},
   // {path:'dashboard',component:AioncoComponent},
@@ -50,6 +53,7 @@ const routes: Routes = [
 
   {
     path: 'sidenav', component: SideNavComponent, children: [
+      { path: 'dashboard', component: DashComponent },
       { path: 'activities', component: DashboardComponent },
       { path: 'admin', component: AdminDashboardComponent },
       { path: 'grades', component: PatientComponent },
