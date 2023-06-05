@@ -59,7 +59,9 @@ body{
   } */
 
 
-
+  .pwhide{
+    width: 10px;
+  }
   .button-style-signins{
     background-color: #F48120;
     color: white;
@@ -147,6 +149,11 @@ body{
       to {bottom: 0; opacity: 0;}
     } */
 
+    .pwhide{
+      position: relative;
+      left: -10%;
+      top: 7px;
+    }
     .usernameeinput{
         width: 250px;
         height: 27px;
@@ -156,6 +163,7 @@ body{
       width: 250px;
       height: 27px;
       border-radius: 5px;
+      margin-left: 22px;
 
     }
     .textemail{

@@ -38,7 +38,7 @@
                 <mat-checkbox class="check"  [(ngModel)]="checkbox" name="checkbox" (click)="checkboxs()"></mat-checkbox>
                 </td>
                 <td><div id="terms">Creating an account means you're okay with<br>
-                    out <p> Terms of Service </p> and <p>Privacy Policy </p></div></td>
+                    out <p (click)="terms()"> Terms of Service </p> and <p (click)="privacy()">Privacy Policy </p> </div></td>
             </tr>
             </div>
             <button mat-button id='button-style-create' [disabled]="button">Create Account</button>

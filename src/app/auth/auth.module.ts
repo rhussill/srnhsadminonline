@@ -22,6 +22,7 @@ import { RecoveryComponent } from './recovery/recovery.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DialogboxComponent } from './dialogbox/dialogbox.component';
 import { adminLoginComponent } from './login copy/login.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -43,7 +44,8 @@ import { adminLoginComponent } from './login copy/login.component';
     MatToolbarModule,
     MatButtonModule,
     PdfViewerModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatIconModule
   ]
 })
 export class AuthModule { }

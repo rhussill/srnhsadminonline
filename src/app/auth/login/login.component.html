@@ -38,8 +38,12 @@
                 class="pasworddinput"
                 placeholder="Password"
                 type="password"
+                [type]="hide ?'password':'text'"
                 
                 >
+                <mat-icon class="pwhide" matSuffix (click)="hide=!hide">
+                    {{hide?'visibility_off':'visibility'}}
+                </mat-icon>
              <br>
                 <div class="forg">Forgot your password? <p (click)="recovery()"> Click Here</p></div>
 

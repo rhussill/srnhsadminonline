@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#content ul li {
+    margin-bottom: 10px;
+}

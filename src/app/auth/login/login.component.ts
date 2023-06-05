@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   responsedata:any;
   message='';
 
- 
+  hide=true;
 
   constructor(private router:Router ,public service:AppService , private dialog:MatDialog) { }
 

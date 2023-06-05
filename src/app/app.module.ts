@@ -106,6 +106,10 @@ import { FilipinoComponent } from './admin-dashboard/subjects/filipino/filipino.
 import { EspComponent } from './admin-dashboard/subjects/esp/esp.component';
 import { ContactusDialogComponent } from './contactus-dialog/contactus-dialog.component';
 import { DashComponent } from './dash/dash.component';
+import { TermofserviceComponent } from './termofservice/termofservice.component';
+import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 
 
@@ -167,7 +171,9 @@ import { DashComponent } from './dash/dash.component';
     FilipinoComponent,
     EspComponent,
     ContactusDialogComponent,
-    DashComponent
+    DashComponent,
+    TermofserviceComponent,
+    PrivacypolicyComponent
   ],
   imports: [
     CommonModule,
@@ -211,6 +217,7 @@ import { DashComponent } from './dash/dash.component';
     MatDatepickerModule,
     PdfViewerModule,
     NgxExtendedPdfViewerModule,
+    ScrollingModule,
 
 
     

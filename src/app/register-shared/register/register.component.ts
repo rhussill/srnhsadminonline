@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { elementAt } from 'rxjs';
 import { AppService } from 'src/app/app.service';
 import { FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { TermofserviceComponent } from 'src/app/termofservice/termofservice.component';
+import { PrivacypolicyComponent } from 'src/app/privacypolicy/privacypolicy.component';
 
 @Component({
   selector: 'app-register',
@@ -16,10 +19,17 @@ export class RegisterComponent implements OnInit {
   button:boolean=true;
 
 
-  constructor(private router:Router, private service:AppService) { }
+  constructor(private router:Router, private service:AppService , private dialog:MatDialog) { }
 
   ngOnInit(): void {
     
+  }
+
+  privacy(){
+    this.dialog.open(PrivacypolicyComponent);
+  }
+  terms(){
+    this.dialog.open(TermofserviceComponent)
   }
 
   home(){
